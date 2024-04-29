@@ -1,0 +1,834 @@
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2> <http://www.w3.org/2002/07/owl#versionIRI> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2/1.0.0> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2> <http://www.w3.org/2000/01/rdf-schema#comment> "The ontology of reviews made by travelers aims to represent the knowledge that is acquired through the comments and ratings made by passengers, at the general level of the flight, and at the level of the services offered during it." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Oscar Santana Sotomayor" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2> <http://www.w3.org/2000/01/rdf-schema#label> "Ontology about  Reviews made for Passengers from flights" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2000/01/rdf-schema#sameAs
+<http://www.w3.org/2000/01/rdf-schema#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#arrives_at
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#arrives_at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#arrives_at> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#receives> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#arrives_at> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#arrives_at> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Destination> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#arrives_at> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates the city destination where the specific flight arrives," .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#arrives_at> <http://www.w3.org/2000/01/rdf-schema#label> "ArrivesAt" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#citizen_of
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#citizen_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#citizen_of> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_citizenship> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#citizen_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#citizen_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#citizen_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Country> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#citizen_of> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates that the passenger is a citizen or has citizenship of the specified country." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#citizen_of> <http://www.w3.org/2000/01/rdf-schema#label> "CitizenOf" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#departs_from
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#departs_from> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#departs_from> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_let_go> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#departs_from> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#departs_from> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Origin> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#departs_from> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates the city from which a specific flight departs." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#departs_from> <http://www.w3.org/2000/01/rdf-schema#label> "DepartsFrom" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_been_taken_by
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_been_taken_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_been_taken_by> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_been_taken_by> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_taken> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_been_taken_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_been_taken_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_been_taken_by> <http://www.w3.org/2000/01/rdf-schema#comment> "It establishes that a flight has been taken by a specific passenger" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_been_taken_by> <http://www.w3.org/2000/01/rdf-schema#label> "HasBeenTakenBy" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_citizenship
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_citizenship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_citizenship> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Country> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_citizenship> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_citizenship> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates the Country has, among its citizenship, the passenger." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_citizenship> <http://www.w3.org/2000/01/rdf-schema#label> "HasCitizenship" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_created_review
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_created_review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_created_review> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_created_review> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_created_by> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_created_review> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_created_review> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_created_review> <http://www.w3.org/2000/01/rdf-schema#comment> "It Indicates that a passenger reviews a specific flight." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_created_review> <http://www.w3.org/2000/01/rdf-schema#label> "HasCreatedReview" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_evaluation_of
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_evaluation_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_evaluation_of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_evaluation_of> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_evaluated_in> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_evaluation_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_evaluation_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Rating_Services> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_evaluation_of> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a review contains evaluations about a service offered during a specific flight." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_evaluation_of> <http://www.w3.org/2000/01/rdf-schema#label> "HasEvaluationOf" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_let_go
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_let_go> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_let_go> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_let_go> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Origin> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_let_go> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_let_go> <http://www.w3.org/2000/01/rdf-schema#comment> "It Indicates that a flight has departed from a city of origin." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_let_go> <http://www.w3.org/2000/01/rdf-schema#label> "HasLetGo" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_taken
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_taken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_taken> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_taken> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_taken> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_taken> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a passenger has taken a specific flight." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_taken> <http://www.w3.org/2000/01/rdf-schema#label> "HasTaken" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_created_by
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_created_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_created_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_created_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_created_by> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates that a review has been created by a passenger." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_created_by> <http://www.w3.org/2000/01/rdf-schema#label> "IsCreatedBy" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_evaluated_in
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_evaluated_in> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_evaluated_in> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Rating_Services> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_evaluated_in> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_evaluated_in> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates that a service has been evaluated in a review." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_evaluated_in> <http://www.w3.org/2000/01/rdf-schema#label> "IsEvaluatedIn" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_ocuppied_by
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_ocuppied_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_ocuppied_by> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#occupies> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_ocuppied_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Type> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_ocuppied_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_ocuppied_by> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates that a type of seat is used by a passenger." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_ocuppied_by> <http://www.w3.org/2000/01/rdf-schema#label> "IsOcuppiedBy" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_type_of_traveller
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_type_of_traveller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_type_of_traveller> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#traveller_type_assigned_to> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_type_of_traveller> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_type_of_traveller> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Type_Of_Traveller> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_type_of_traveller> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the passenger profile, in terms of the motivation for the trip, that a specific passenger has." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_type_of_traveller> <http://www.w3.org/2000/01/rdf-schema#label> "IsTypeOfTraveller" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#occupies
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#occupies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#occupies> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#occupies> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Type> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#occupies> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates the type of seat (with its amenities, services and approximate location offered) occupied by a passenger on a specific flight" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#occupies> <http://www.w3.org/2000/01/rdf-schema#label> "Occupies" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operated_by
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operated_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operated_by> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operated_by> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operates> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operated_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Aircraft> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operated_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Airline> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operated_by> <http://www.w3.org/2000/01/rdf-schema#comment> "It Indicates the connection between the aircraft and the entity responsible, the airline, for its management during flights." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operated_by> <http://www.w3.org/2000/01/rdf-schema#label> "OperatedBy" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operates
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operates> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Airline> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operates> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Aircraft> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operates> <http://www.w3.org/2000/01/rdf-schema#comment> "It Indicates the connection between the Airline and the Aircraft model it operates during flights." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operates> <http://www.w3.org/2000/01/rdf-schema#label> "Operates" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#receives
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#receives> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#receives> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Destination> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#receives> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#receives> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates that a city, as destination, receives the arrival of a flight." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#receives> <http://www.w3.org/2000/01/rdf-schema#label> "Receives" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#traveller_type_assigned_to
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#traveller_type_assigned_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#traveller_type_assigned_to> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Type_Of_Traveller> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#traveller_type_assigned_to> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#traveller_type_assigned_to> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates that the type of traveller is assigned to a passenger" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#traveller_type_assigned_to> <http://www.w3.org/2000/01/rdf-schema#label> "TravellerTypeAssignedTo" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#used_by
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#used_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#used_by> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#uses> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#used_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Aircraft> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#used_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#used_by> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates that an Aircraft is used as a mean of transportation by a flight." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#used_by> <http://www.w3.org/2000/01/rdf-schema#label> "UsedBy" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#uses
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#uses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#uses> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#uses> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Aircraft> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#uses> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates that a specific flight uses a specific aircraft as a means of transportation." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#uses> <http://www.w3.org/2000/01/rdf-schema#label> "Uses" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Body
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Body> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Body> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Body> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Body> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Body> <http://www.w3.org/2000/01/rdf-schema#comment> "The main text, with detailed information, of a flight review." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Body> <http://www.w3.org/2000/01/rdf-schema#label> "Body" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_flown
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_flown> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_flown> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_flown> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_flown> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_flown> <http://www.w3.org/2000/01/rdf-schema#comment> "it indicates the date on which a specific flight took place" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_flown> <http://www.w3.org/2000/01/rdf-schema#label> "DateFlown" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_published
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_published> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_published> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_published> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_published> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_published> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates  the date on which a specific review was published." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_published> <http://www.w3.org/2000/01/rdf-schema#label> "DatePublished" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Overall_rating
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Overall_rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Overall_rating> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Overall_rating> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/2001/XMLSchema#maxInclusive> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid5 .
+_:genid5 <http://www.w3.org/2001/XMLSchema#minInclusive> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Overall_rating> <http://www.w3.org/2000/01/rdf-schema#comment> "It represents the overall rating assigned by a passenger to a specific review." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Overall_rating> <http://www.w3.org/2000/01/rdf-schema#label> "OverallRating" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Recommended
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Recommended> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Recommended> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Recommended> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Recommended> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Recommended> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates if a passenger recommends a specific flight" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Recommended> <http://www.w3.org/2000/01/rdf-schema#label> "Recommended" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Title
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Title> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Title> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Title> <http://www.w3.org/2000/01/rdf-schema#comment> "The main title of a review, that summarizes the content of the body review." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Title> <http://www.w3.org/2000/01/rdf-schema#label> "Title" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Verified
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Verified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Verified> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Verified> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Verified> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates whether the review has been corroborated as authentic and comes from a passenger who actually took the flight." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Verified> <http://www.w3.org/2000/01/rdf-schema#label> "Verified" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#serviceScore
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#serviceScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#serviceScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Rating_Services> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#serviceScore> <http://www.w3.org/2000/01/rdf-schema#range> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#withRestrictions> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid8 .
+_:genid8 <http://www.w3.org/2001/XMLSchema#maxInclusive> "5.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid10 .
+_:genid10 <http://www.w3.org/2001/XMLSchema#minInclusive> "0.0"^^<http://www.w3.org/2001/XMLSchema#float> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/2002/07/owl#onDatatype> <http://www.w3.org/2001/XMLSchema#float> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#serviceScore> <http://www.w3.org/2000/01/rdf-schema#comment> "It Indicates the score that a passenger assigns to the service of the flight evaluated." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#serviceScore> <http://www.w3.org/2000/01/rdf-schema#label> "ServiceMark" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Aircraft
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Aircraft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Aircraft> <http://www.w3.org/2000/01/rdf-schema#comment> "Vehicle intended to transport passengers." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Aircraft> <http://www.w3.org/2000/01/rdf-schema#label> "Aircraft" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Airline
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Airline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Airline> <http://www.w3.org/2000/01/rdf-schema#comment> "Air transportation organization or company." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Airline> <http://www.w3.org/2000/01/rdf-schema#label> "Airline" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Airline> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/Airline" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Bad_Review
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Bad_Review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Bad_Review> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Bad_Review> <http://www.w3.org/2000/01/rdf-schema#comment> "A review with a negative score (less than 5 out of 10) in the overall rating." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Bad_Review> <http://www.w3.org/2000/01/rdf-schema#label> "NegativeReview" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Business
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Business> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Business> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Type_Of_Traveller> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Business> <http://www.w3.org/2000/01/rdf-schema#comment> "A passenger traveling for reasons related to their work or business." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Business> <http://www.w3.org/2000/01/rdf-schema#label> "Business" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Business_Class
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Business_Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Business_Class> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Type> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Business_Class> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of seating on an aircraft that offers superior amenities and services compared to economy class." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Business_Class> <http://www.w3.org/2000/01/rdf-schema#label> "BusinessClass" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Cabin_Staff_Service
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Cabin_Staff_Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Cabin_Staff_Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Rating_Services> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Cabin_Staff_Service> <http://www.w3.org/2000/01/rdf-schema#comment> "The quality of service provided by cabin staff during the flight" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Cabin_Staff_Service> <http://www.w3.org/2000/01/rdf-schema#label> "CabinStaffService" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#City
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Geografic_Region> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#City> <http://www.w3.org/2000/01/rdf-schema#comment> "A large town" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#City> <http://www.w3.org/2000/01/rdf-schema#label> "City" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Country
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Geografic_Region> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Country> <http://www.w3.org/2000/01/rdf-schema#comment> "A nation with its own government, occupying a particular territory." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Country> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/Country" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Couple_Leisure
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Couple_Leisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Couple_Leisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Type_Of_Traveller> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Couple_Leisure> <http://www.w3.org/2000/01/rdf-schema#comment> "Passenger who flies with another person as a couple, and who travel together for pleasure." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Couple_Leisure> <http://www.w3.org/2000/01/rdf-schema#label> "CoupleLeisure" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Destination
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Destination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Destination> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid11 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#receives> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#City> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Destination> <http://www.w3.org/2000/01/rdf-schema#comment> "The city to which a flight is headed, where the aircraft plans to arrive at the end of its journey." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Destination> <http://www.w3.org/2000/01/rdf-schema#label> "Destination" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Economy_Class
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Economy_Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Economy_Class> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Type> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Economy_Class> <http://www.w3.org/2000/01/rdf-schema#comment> "The standard seating class on an aircraft, which offers a basic level of comfort and services at a more affordable price compared to higher classes.\"" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Economy_Class> <http://www.w3.org/2000/01/rdf-schema#label> "EconomyClass" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#ExcellentReview
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#ExcellentReview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#ExcellentReview> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review> .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Family_Leisure
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Family_Leisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Family_Leisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Type_Of_Traveller> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Family_Leisure> <http://www.w3.org/2000/01/rdf-schema#comment> "Passenger traveling with family for pleasure" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Family_Leisure> <http://www.w3.org/2000/01/rdf-schema#label> "FamilyLeisure" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#First_Class
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#First_Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#First_Class> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Type> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#First_Class> <http://www.w3.org/2000/01/rdf-schema#comment> "The highest luxury seating class available on an aircraft, offering the highest levels of comfort, personalized services and exclusivity." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#First_Class> <http://www.w3.org/2000/01/rdf-schema#label> "FirstClass" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_been_taken_by> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight> <http://www.w3.org/2000/01/rdf-schema#comment> "An event or travel process carried out by an aircraft from a point of origin to a specific destination, in which it carries passengers." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight> <http://www.w3.org/2000/01/rdf-schema#label> "Flight" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/page/Flight" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#FoodAndBeverages
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#FoodAndBeverages> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#FoodAndBeverages> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Rating_Services> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#FoodAndBeverages> <http://www.w3.org/2000/01/rdf-schema#comment> "The quality and variety of food and drink offered to passengers during the flight" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#FoodAndBeverages> <http://www.w3.org/2000/01/rdf-schema#label> "FoodAndBeverages" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Geografic_Region
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Geografic_Region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Geografic_Region> <http://www.w3.org/2000/01/rdf-schema#comment> "A demarcated area of the Earth" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Geografic_Region> <http://www.w3.org/2000/01/rdf-schema#label> "GeographicRegion" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Good_Review
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Good_Review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Good_Review> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Good_Review> <http://www.w3.org/2000/01/rdf-schema#comment> "A review with a positive score (equals or greater than 5 out of 10) in the overall rating." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Good_Review> <http://www.w3.org/2000/01/rdf-schema#label> "PositiveReview" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Ground_Service
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Ground_Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Ground_Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Rating_Services> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Ground_Service> <http://www.w3.org/2000/01/rdf-schema#comment> "The services provided to passengers on the ground before and after the flight." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Ground_Service> <http://www.w3.org/2000/01/rdf-schema#label> "GroundService" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Inflight_Entertainment
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Inflight_Entertainment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Inflight_Entertainment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Rating_Services> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Inflight_Entertainment> <http://www.w3.org/2000/01/rdf-schema#comment> "The availability and quality of entertainment options offered to passengers during the flight" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Inflight_Entertainment> <http://www.w3.org/2000/01/rdf-schema#label> "InflightEntertainment" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Origin
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Origin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Origin> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid16 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_let_go> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#City> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Origin> <http://www.w3.org/2000/01/rdf-schema#comment> "The city of departure of a flight, from where the aircraft begins its trajectory towards its final destination." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Origin> <http://www.w3.org/2000/01/rdf-schema#label> "Origin" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger> <http://www.w3.org/2000/01/rdf-schema#comment> "A person traveling on an aircraft during a flight" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger> <http://www.w3.org/2000/01/rdf-schema#label> "Passenger" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/page/Passenger" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Premium_Economy
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Premium_Economy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Premium_Economy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Type> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Premium_Economy> <http://www.w3.org/2000/01/rdf-schema#comment> "A class intermediate between Economy Class and Business Class, offering an enhanced flight experience compared to standard economy class, but at a lower price than business class." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Premium_Economy> <http://www.w3.org/2000/01/rdf-schema#label> "PremiumEconomy" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Rating_Services
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Rating_Services> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Rating_Services> <http://www.w3.org/2000/01/rdf-schema#comment> "Entity that represents different services offered during a flight that can be evaluated and rated by passengers." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Rating_Services> <http://www.w3.org/2000/01/rdf-schema#label> "RatingServices" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review> <http://www.w3.org/2000/01/rdf-schema#comment> "An evaluation or critique made by a passenger about their flight experience, which may include comments and ratings on different aspects of the flight." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review> <http://www.w3.org/2000/01/rdf-schema#label> "Review" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Comfort
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Comfort> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Comfort> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Rating_Services> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Comfort> <http://www.w3.org/2000/01/rdf-schema#comment> "The quality and comfort of the seats offered to passengers during the flight." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Comfort> <http://www.w3.org/2000/01/rdf-schema#label> "SeatComfort" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Type
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Type> <http://www.w3.org/2000/01/rdf-schema#comment> "represents the different types of seats that a passenger may have occupied on an aircraft during a flight." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Type> <http://www.w3.org/2000/01/rdf-schema#label> "SeatType" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Solo_Leisure
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Solo_Leisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Solo_Leisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Type_Of_Traveller> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Solo_Leisure> <http://www.w3.org/2000/01/rdf-schema#comment> "assenger traveling alone for pleasure" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Solo_Leisure> <http://www.w3.org/2000/01/rdf-schema#label> "SoloLeisure" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Type_Of_Traveller
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Type_Of_Traveller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Type_Of_Traveller> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstraction that indicates the role that the passenger has, the purpose for which he/she makes the flight: leisure, business, with family, etc." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Type_Of_Traveller> <http://www.w3.org/2000/01/rdf-schema#label> "TypeOfTraveller" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Value_For_Money
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Value_For_Money> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Value_For_Money> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Rating_Services> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Value_For_Money> <http://www.w3.org/2000/01/rdf-schema#comment> "Passengers' perception of the relationship between the price paid for the flight and the value received in exchange." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Value_For_Money> <http://www.w3.org/2000/01/rdf-schema#label> "ValueForMoney" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#WifiAndConnectivity
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#WifiAndConnectivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#WifiAndConnectivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Rating_Services> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#WifiAndConnectivity> <http://www.w3.org/2000/01/rdf-schema#comment> "The availability and quality of Wi-Fi connectivity and other connectivity services offered to passengers during the flight" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#WifiAndConnectivity> <http://www.w3.org/2000/01/rdf-schema#label> "WifiAndConnectivity" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#A320
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#A320> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#A320> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Aircraft> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#A320> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operated_by> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Ryanair> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#A320> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance representing an aircraft model named A320." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#A320> <http://www.w3.org/2000/01/rdf-schema#label> "A320" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Barcelona
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Barcelona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Barcelona> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance representing the city of Barcelona." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Barcelona> <http://www.w3.org/2000/01/rdf-schema#label> "Barcelona" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Boeing737
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Boeing737> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Boeing737> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Aircraft> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Boeing737> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operated_by> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Qatar> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Boeing737> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#used_by> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight2> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Boeing737> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance representing an aircraft model named Boeing 737." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Boeing737> <http://www.w3.org/2000/01/rdf-schema#label> "Boeing737" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Carlos
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Carlos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Carlos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Carlos> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_taken> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight2> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Carlos> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance representing the passenger named Carlos." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Carlos> <http://www.w3.org/2000/01/rdf-schema#label> "Carlos" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight1
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight1> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#arrives_at> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Barcelona> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight1> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#departs_from> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Madrid> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight1> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_been_taken_by> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Pedro> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight1> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#uses> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#A320> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight1> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_flown> "2024-03-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight1> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance representing a first flight." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight1> <http://www.w3.org/2000/01/rdf-schema#label> "Flight1" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight2
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight2> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_flown> "2024-04-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight2> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance representing a second flight." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight2> <http://www.w3.org/2000/01/rdf-schema#label> "Flight2" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Madrid
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Madrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Madrid> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance representing the city of Madrid." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Madrid> <http://www.w3.org/2000/01/rdf-schema#label> "Madrid" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Pedro
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Pedro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Pedro> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#citizen_of> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Portugal> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Pedro> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_created_review> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review1> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Pedro> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance representing a pasenger named Pedro." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Pedro> <http://www.w3.org/2000/01/rdf-schema#label> "Pedro" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Portugal
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Portugal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Portugal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Country> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Portugal> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance that represents the country named Portugal." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Portugal> <http://www.w3.org/2000/01/rdf-schema#label> "Portugal" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Qatar
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Qatar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Qatar> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance representing Qatar Airline." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Qatar> <http://www.w3.org/2000/01/rdf-schema#label> "Qatar" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review1
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review1> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_evaluation_of> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#SeatComfort1> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review1> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Body> "The staff on the plane are so very pleasant and always come to see us just to check if we need anything." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review1> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_published> "2024-04-27"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review1> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Overall_rating> "7"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review1> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Recommended> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review1> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Title> "A pleasant flight" .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review1> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Verified> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review1> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance representing a first review." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review1> <http://www.w3.org/2000/01/rdf-schema#label> "Review1" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review2
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review2> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_created_by> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Carlos> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review2> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Overall_rating> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review2> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance representing a second review." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review2> <http://www.w3.org/2000/01/rdf-schema#label> "Review2" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Ryanair
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Ryanair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Ryanair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Airline> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Ryanair> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance representing Ryanair Airline." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Ryanair> <http://www.w3.org/2000/01/rdf-schema#label> "Ryanair" .
+# 
+# http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#SeatComfort1
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#SeatComfort1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#SeatComfort1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Comfort> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#SeatComfort1> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#serviceScore> "3.5"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#SeatComfort1> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance representing an evaluation about seat comfort of a flight.." .
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#SeatComfort1> <http://www.w3.org/2000/01/rdf-schema#label> "SeatComfort1" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid20 <http://www.w3.org/2002/07/owl#members> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Good_Review> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#ExcellentReview> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Bad_Review> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid24 <http://www.w3.org/2002/07/owl#members> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Solo_Leisure> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Family_Leisure> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Couple_Leisure> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Business> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid29 <http://www.w3.org/2002/07/owl#members> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Premium_Economy> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#First_Class> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Economy_Class> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Business_Class> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Rules
+# #
+# #################################################################
+# 
+# 
+<urn:swrl:var#P> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#R> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+<urn:swrl:var#v> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
+_:genid34 <http://www.w3.org/2000/01/rdf-schema#comment> "Rule which infers that the type of Review made by a Passenger is Positive if its overall mark is >=5 and <9." .
+_:genid34 <http://www.w3.org/2000/01/rdf-schema#label> "PositiveReview" .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid34 <http://www.w3.org/2003/11/swrl#body> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid36 .
+_:genid36 <http://www.w3.org/2003/11/swrl#arguments> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "9"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#v> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> .
+<http://www.w3.org/2003/11/swrlb#lessThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid40 .
+_:genid40 <http://www.w3.org/2003/11/swrl#arguments> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#v> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> .
+<http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid44 .
+_:genid44 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#v> .
+_:genid44 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#R> .
+_:genid44 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Overall_rating> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid46 .
+_:genid46 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#R> .
+_:genid46 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#P> .
+_:genid46 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_created_review> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid48 .
+_:genid48 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#R> .
+_:genid48 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid50 .
+_:genid50 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#P> .
+_:genid50 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid34 <http://www.w3.org/2003/11/swrl#head> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid52 .
+_:genid52 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#R> .
+_:genid52 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Good_Review> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid53 <http://www.w3.org/2000/01/rdf-schema#comment> "Rule which infers that the type of Review made by a Passenger is Negative if its overall mark is < 5." .
+_:genid53 <http://www.w3.org/2000/01/rdf-schema#label> "NegativeReview" .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid53 <http://www.w3.org/2003/11/swrl#body> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid55 .
+_:genid55 <http://www.w3.org/2003/11/swrl#arguments> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#v> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid55 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid59 .
+_:genid59 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#v> .
+_:genid59 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#R> .
+_:genid59 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Overall_rating> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid61 .
+_:genid61 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#R> .
+_:genid61 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#P> .
+_:genid61 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_created_review> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid63 .
+_:genid63 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#R> .
+_:genid63 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid65 .
+_:genid65 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#P> .
+_:genid65 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid53 <http://www.w3.org/2003/11/swrl#head> _:genid66 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid67 .
+_:genid67 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#R> .
+_:genid67 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Bad_Review> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid68 <http://www.w3.org/2000/01/rdf-schema#comment> "Rule which infers that the type of Review made by a Passenger is Excellent if its overall mark is >9." .
+_:genid68 <http://www.w3.org/2000/01/rdf-schema#label> "ExcellentReview" .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid68 <http://www.w3.org/2003/11/swrl#body> _:genid79 .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid77 .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid75 .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid73 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid70 .
+_:genid70 <http://www.w3.org/2003/11/swrl#arguments> _:genid72 .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid71 .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "9"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#v> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid70 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid74 .
+_:genid74 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#v> .
+_:genid74 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#R> .
+_:genid74 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Overall_rating> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid76 .
+_:genid76 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#R> .
+_:genid76 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#P> .
+_:genid76 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_created_review> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid78 .
+_:genid78 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#R> .
+_:genid78 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid80 .
+_:genid80 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#P> .
+_:genid80 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid68 <http://www.w3.org/2003/11/swrl#head> _:genid81 .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid82 .
+_:genid82 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#R> .
+_:genid82 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#ExcellentReview> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

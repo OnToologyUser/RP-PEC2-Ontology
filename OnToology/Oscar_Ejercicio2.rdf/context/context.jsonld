@@ -1,0 +1,226 @@
+{
+  "@context" : {
+    "Inflight_Entertainment" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Inflight_Entertainment"
+    },
+    "Seat_Comfort" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Comfort"
+    },
+    "Verified" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Verified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Review" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review"
+    },
+    "First_Class" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#First_Class"
+    },
+    "Country" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Country"
+    },
+    "operates" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operates",
+      "@type" : "@id"
+    },
+    "Couple_Leisure" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Couple_Leisure"
+    },
+    "Recommended" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Recommended",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "Body" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Body",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "has_been_taken_by" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_been_taken_by",
+      "@type" : "@id"
+    },
+    "Rating_Services" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Rating_Services"
+    },
+    "has_taken" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_taken",
+      "@type" : "@id"
+    },
+    "Economy_Class" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Economy_Class"
+    },
+    "departs_from" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#departs_from",
+      "@type" : "@id"
+    },
+    "Title" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Title",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Date_flown" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_flown",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "Business_Class" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Business_Class"
+    },
+    "Destination" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Destination"
+    },
+    "Solo_Leisure" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Solo_Leisure"
+    },
+    "has_let_go" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_let_go",
+      "@type" : "@id"
+    },
+    "occupies" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#occupies",
+      "@type" : "@id"
+    },
+    "Type_Of_Traveller" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Type_Of_Traveller"
+    },
+    "Seat_Type" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Type"
+    },
+    "Origin" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Origin"
+    },
+    "used_by" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#used_by",
+      "@type" : "@id"
+    },
+    "ExcellentReview" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#ExcellentReview"
+    },
+    "Business" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Business"
+    },
+    "citizen_of" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#citizen_of",
+      "@type" : "@id"
+    },
+    "is_created_by" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_created_by",
+      "@type" : "@id"
+    },
+    "Good_Review" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Good_Review"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "Passenger" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger"
+    },
+    "serviceScore" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#serviceScore"
+    },
+    "Ground_Service" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Ground_Service"
+    },
+    "arrives_at" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#arrives_at",
+      "@type" : "@id"
+    },
+    "Aircraft" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Aircraft"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "is_type_of_traveller" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_type_of_traveller",
+      "@type" : "@id"
+    },
+    "Cabin_Staff_Service" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Cabin_Staff_Service"
+    },
+    "Date_published" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_published",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "is_ocuppied_by" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_ocuppied_by",
+      "@type" : "@id"
+    },
+    "uses" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#uses",
+      "@type" : "@id"
+    },
+    "Airline" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Airline"
+    },
+    "WifiAndConnectivity" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#WifiAndConnectivity"
+    },
+    "Geografic_Region" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Geografic_Region"
+    },
+    "has_created_review" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_created_review",
+      "@type" : "@id"
+    },
+    "has_citizenship" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_citizenship",
+      "@type" : "@id"
+    },
+    "Flight" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight"
+    },
+    "Premium_Economy" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Premium_Economy"
+    },
+    "has_evaluation_of" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_evaluation_of",
+      "@type" : "@id"
+    },
+    "Family_Leisure" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Family_Leisure"
+    },
+    "Bad_Review" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Bad_Review"
+    },
+    "City" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#City"
+    },
+    "Value_For_Money" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Value_For_Money"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "traveller_type_assigned_to" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#traveller_type_assigned_to",
+      "@type" : "@id"
+    },
+    "is_evaluated_in" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_evaluated_in",
+      "@type" : "@id"
+    },
+    "FoodAndBeverages" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#FoodAndBeverages"
+    },
+    "receives" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#receives",
+      "@type" : "@id"
+    },
+    "Overall_rating" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Overall_rating"
+    },
+    "operated_by" : {
+      "@id" : "http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operated_by",
+      "@type" : "@id"
+    }
+  }
+}

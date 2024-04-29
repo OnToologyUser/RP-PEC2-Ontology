@@ -1,0 +1,853 @@
+@prefix : <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#> .
+
+<http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2> rdf:type owl:Ontology ;
+                                                                owl:versionIRI <http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2/1.0.0> ;
+                                                                rdfs:comment "The ontology of reviews made by travelers aims to represent the knowledge that is acquired through the comments and ratings made by passengers, at the general level of the flight, and at the level of the services offered during it." ;
+                                                                rdfs:isDefinedBy "Oscar Santana Sotomayor" ;
+                                                                rdfs:label "Ontology about  Reviews made for Passengers from flights" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#arrives_at
+:arrives_at rdf:type owl:ObjectProperty ;
+            owl:inverseOf :receives ;
+            rdfs:domain :Flight ;
+            rdfs:range :Destination ;
+            rdfs:comment "It indicates the city destination where the specific flight arrives," ;
+            rdfs:label "ArrivesAt" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#citizen_of
+:citizen_of rdf:type owl:ObjectProperty ;
+            owl:inverseOf :has_citizenship ;
+            rdf:type owl:FunctionalProperty ;
+            rdfs:domain :Passenger ;
+            rdfs:range :Country ;
+            rdfs:comment "It indicates that the passenger is a citizen or has citizenship of the specified country." ;
+            rdfs:label "CitizenOf" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#departs_from
+:departs_from rdf:type owl:ObjectProperty ;
+              owl:inverseOf :has_let_go ;
+              rdfs:domain :Flight ;
+              rdfs:range :Origin ;
+              rdfs:comment "It indicates the city from which a specific flight departs." ;
+              rdfs:label "DepartsFrom" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_been_taken_by
+:has_been_taken_by rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   owl:inverseOf :has_taken ;
+                   rdfs:domain :Flight ;
+                   rdfs:range :Passenger ;
+                   rdfs:comment "It establishes that a flight has been taken by a specific passenger" ;
+                   rdfs:label "HasBeenTakenBy" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_citizenship
+:has_citizenship rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Country ;
+                 rdfs:range :Passenger ;
+                 rdfs:comment "It indicates the Country has, among its citizenship, the passenger." ;
+                 rdfs:label "HasCitizenship" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_created_review
+:has_created_review rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    owl:inverseOf :is_created_by ;
+                    rdfs:domain :Passenger ;
+                    rdfs:range :Review ;
+                    rdfs:comment "It Indicates that a passenger reviews a specific flight." ;
+                    rdfs:label "HasCreatedReview" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_evaluation_of
+:has_evaluation_of rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   owl:inverseOf :is_evaluated_in ;
+                   rdfs:domain :Review ;
+                   rdfs:range :Rating_Services ;
+                   rdfs:comment "Indicates that a review contains evaluations about a service offered during a specific flight." ;
+                   rdfs:label "HasEvaluationOf" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_let_go
+:has_let_go rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :Origin ;
+            rdfs:range :Flight ;
+            rdfs:comment "It Indicates that a flight has departed from a city of origin." ;
+            rdfs:label "HasLetGo" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#has_taken
+:has_taken rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :Passenger ;
+           rdfs:range :Flight ;
+           rdfs:comment "Indicates that a passenger has taken a specific flight." ;
+           rdfs:label "HasTaken" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_created_by
+:is_created_by rdf:type owl:ObjectProperty ;
+               rdfs:domain :Review ;
+               rdfs:range :Passenger ;
+               rdfs:comment "It indicates that a review has been created by a passenger." ;
+               rdfs:label "IsCreatedBy" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_evaluated_in
+:is_evaluated_in rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Rating_Services ;
+                 rdfs:range :Review ;
+                 rdfs:comment "It indicates that a service has been evaluated in a review." ;
+                 rdfs:label "IsEvaluatedIn" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_ocuppied_by
+:is_ocuppied_by rdf:type owl:ObjectProperty ;
+                owl:inverseOf :occupies ;
+                rdfs:domain :Seat_Type ;
+                rdfs:range :Passenger ;
+                rdfs:comment "It indicates that a type of seat is used by a passenger." ;
+                rdfs:label "IsOcuppiedBy" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#is_type_of_traveller
+:is_type_of_traveller rdf:type owl:ObjectProperty ;
+                      owl:inverseOf :traveller_type_assigned_to ;
+                      rdfs:domain :Passenger ;
+                      rdfs:range :Type_Of_Traveller ;
+                      rdfs:comment "Indicates the passenger profile, in terms of the motivation for the trip, that a specific passenger has." ;
+                      rdfs:label "IsTypeOfTraveller" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#occupies
+:occupies rdf:type owl:ObjectProperty ;
+          rdfs:domain :Passenger ;
+          rdfs:range :Seat_Type ;
+          rdfs:comment "It indicates the type of seat (with its amenities, services and approximate location offered) occupied by a passenger on a specific flight" ;
+          rdfs:label "Occupies" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operated_by
+:operated_by rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             owl:inverseOf :operates ;
+             rdfs:domain :Aircraft ;
+             rdfs:range :Airline ;
+             rdfs:comment "It Indicates the connection between the aircraft and the entity responsible, the airline, for its management during flights." ;
+             rdfs:label "OperatedBy" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#operates
+:operates rdf:type owl:ObjectProperty ;
+          rdfs:domain :Airline ;
+          rdfs:range :Aircraft ;
+          rdfs:comment "It Indicates the connection between the Airline and the Aircraft model it operates during flights." ;
+          rdfs:label "Operates" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#receives
+:receives rdf:type owl:ObjectProperty ;
+          rdfs:domain :Destination ;
+          rdfs:range :Flight ;
+          rdfs:comment "It indicates that a city, as destination, receives the arrival of a flight." ;
+          rdfs:label "Receives" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#traveller_type_assigned_to
+:traveller_type_assigned_to rdf:type owl:ObjectProperty ;
+                            rdfs:domain :Type_Of_Traveller ;
+                            rdfs:range :Passenger ;
+                            rdfs:comment "It indicates that the type of traveller is assigned to a passenger" ;
+                            rdfs:label "TravellerTypeAssignedTo" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#used_by
+:used_by rdf:type owl:ObjectProperty ;
+         owl:inverseOf :uses ;
+         rdfs:domain :Aircraft ;
+         rdfs:range :Flight ;
+         rdfs:comment "It indicates that an Aircraft is used as a mean of transportation by a flight." ;
+         rdfs:label "UsedBy" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#uses
+:uses rdf:type owl:ObjectProperty ;
+      rdfs:domain :Flight ;
+      rdfs:range :Aircraft ;
+      rdfs:comment "It indicates that a specific flight uses a specific aircraft as a means of transportation." ;
+      rdfs:label "Uses" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Body
+:Body rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain :Review ;
+      rdfs:range xsd:string ;
+      rdfs:comment "The main text, with detailed information, of a flight review." ;
+      rdfs:label "Body" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_flown
+:Date_flown rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Flight ;
+            rdfs:range xsd:date ;
+            rdfs:comment "it indicates the date on which a specific flight took place" ;
+            rdfs:label "DateFlown" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Date_published
+:Date_published rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Review ;
+                rdfs:range xsd:date ;
+                rdfs:comment "It indicates  the date on which a specific review was published." ;
+                rdfs:label "DatePublished" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Overall_rating
+:Overall_rating rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Review ;
+                rdfs:range [ rdf:type rdfs:Datatype ;
+                             owl:onDatatype xsd:integer ;
+                             owl:withRestrictions ( [ xsd:minInclusive 0
+                                                    ]
+                                                    [ xsd:maxInclusive 10
+                                                    ]
+                                                  )
+                           ] ;
+                rdfs:comment "It represents the overall rating assigned by a passenger to a specific review." ;
+                rdfs:label "OverallRating" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Recommended
+:Recommended rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Review ;
+             rdfs:range xsd:boolean ;
+             rdfs:comment "It indicates if a passenger recommends a specific flight" ;
+             rdfs:label "Recommended" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Title
+:Title rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty ;
+       rdfs:domain :Review ;
+       rdfs:range xsd:string ;
+       rdfs:comment "The main title of a review, that summarizes the content of the body review." ;
+       rdfs:label "Title" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Verified
+:Verified rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Review ;
+          rdfs:range xsd:boolean ;
+          rdfs:comment "It indicates whether the review has been corroborated as authentic and comes from a passenger who actually took the flight." ;
+          rdfs:label "Verified" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#serviceScore
+:serviceScore rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Rating_Services ;
+              rdfs:range [ rdf:type rdfs:Datatype ;
+                           owl:onDatatype xsd:float ;
+                           owl:withRestrictions ( [ xsd:minInclusive "0.0"^^xsd:float
+                                                  ]
+                                                  [ xsd:maxInclusive "5.0"^^xsd:float
+                                                  ]
+                                                )
+                         ] ;
+              rdfs:comment "It Indicates the score that a passenger assigns to the service of the flight evaluated." ;
+              rdfs:label "ServiceMark" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Aircraft
+:Aircraft rdf:type owl:Class ;
+          rdfs:comment "Vehicle intended to transport passengers." ;
+          rdfs:label "Aircraft" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Airline
+:Airline rdf:type owl:Class ;
+         rdfs:comment "Air transportation organization or company." ;
+         rdfs:label "Airline" ;
+         rdfs:sameAs "https://dbpedia.org/ontology/Airline" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Bad_Review
+:Bad_Review rdf:type owl:Class ;
+            rdfs:subClassOf :Review ;
+            rdfs:comment "A review with a negative score (less than 5 out of 10) in the overall rating." ;
+            rdfs:label "NegativeReview" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Business
+:Business rdf:type owl:Class ;
+          rdfs:subClassOf :Type_Of_Traveller ;
+          rdfs:comment "A passenger traveling for reasons related to their work or business." ;
+          rdfs:label "Business" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Business_Class
+:Business_Class rdf:type owl:Class ;
+                rdfs:subClassOf :Seat_Type ;
+                rdfs:comment "A type of seating on an aircraft that offers superior amenities and services compared to economy class." ;
+                rdfs:label "BusinessClass" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Cabin_Staff_Service
+:Cabin_Staff_Service rdf:type owl:Class ;
+                     rdfs:subClassOf :Rating_Services ;
+                     rdfs:comment "The quality of service provided by cabin staff during the flight" ;
+                     rdfs:label "CabinStaffService" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#City
+:City rdf:type owl:Class ;
+      rdfs:subClassOf :Geografic_Region ;
+      rdfs:comment "A large town" ;
+      rdfs:label "City" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf :Geografic_Region ;
+         rdfs:comment "A nation with its own government, occupying a particular territory." ;
+         rdfs:label "Country" ;
+         rdfs:sameAs "https://dbpedia.org/ontology/Country" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Couple_Leisure
+:Couple_Leisure rdf:type owl:Class ;
+                rdfs:subClassOf :Type_Of_Traveller ;
+                rdfs:comment "Passenger who flies with another person as a couple, and who travel together for pleasure." ;
+                rdfs:label "CoupleLeisure" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Destination
+:Destination rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :City
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :receives ;
+                                                          owl:someValuesFrom :Flight
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:comment "The city to which a flight is headed, where the aircraft plans to arrive at the end of its journey." ;
+             rdfs:label "Destination" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Economy_Class
+:Economy_Class rdf:type owl:Class ;
+               rdfs:subClassOf :Seat_Type ;
+               rdfs:comment "The standard seating class on an aircraft, which offers a basic level of comfort and services at a more affordable price compared to higher classes.\"" ;
+               rdfs:label "EconomyClass" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#ExcellentReview
+:ExcellentReview rdf:type owl:Class ;
+                 rdfs:subClassOf :Review .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Family_Leisure
+:Family_Leisure rdf:type owl:Class ;
+                rdfs:subClassOf :Type_Of_Traveller ;
+                rdfs:comment "Passenger traveling with family for pleasure" ;
+                rdfs:label "FamilyLeisure" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#First_Class
+:First_Class rdf:type owl:Class ;
+             rdfs:subClassOf :Seat_Type ;
+             rdfs:comment "The highest luxury seating class available on an aircraft, offering the highest levels of comfort, personalized services and exclusivity." ;
+             rdfs:label "FirstClass" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight
+:Flight rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Restriction ;
+                              owl:onProperty :has_been_taken_by ;
+                              owl:someValuesFrom :Passenger
+                            ] ;
+        rdfs:comment "An event or travel process carried out by an aircraft from a point of origin to a specific destination, in which it carries passengers." ;
+        rdfs:label "Flight" ;
+        rdfs:sameAs "https://dbpedia.org/page/Flight" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#FoodAndBeverages
+:FoodAndBeverages rdf:type owl:Class ;
+                  rdfs:subClassOf :Rating_Services ;
+                  rdfs:comment "The quality and variety of food and drink offered to passengers during the flight" ;
+                  rdfs:label "FoodAndBeverages" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Geografic_Region
+:Geografic_Region rdf:type owl:Class ;
+                  rdfs:comment "A demarcated area of the Earth" ;
+                  rdfs:label "GeographicRegion" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Good_Review
+:Good_Review rdf:type owl:Class ;
+             rdfs:subClassOf :Review ;
+             rdfs:comment "A review with a positive score (equals or greater than 5 out of 10) in the overall rating." ;
+             rdfs:label "PositiveReview" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Ground_Service
+:Ground_Service rdf:type owl:Class ;
+                rdfs:subClassOf :Rating_Services ;
+                rdfs:comment "The services provided to passengers on the ground before and after the flight." ;
+                rdfs:label "GroundService" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Inflight_Entertainment
+:Inflight_Entertainment rdf:type owl:Class ;
+                        rdfs:subClassOf :Rating_Services ;
+                        rdfs:comment "The availability and quality of entertainment options offered to passengers during the flight" ;
+                        rdfs:label "InflightEntertainment" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Origin
+:Origin rdf:type owl:Class ;
+        owl:equivalentClass [ owl:intersectionOf ( :City
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :has_let_go ;
+                                                     owl:someValuesFrom :Flight
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+        rdfs:comment "The city of departure of a flight, from where the aircraft begins its trajectory towards its final destination." ;
+        rdfs:label "Origin" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Passenger
+:Passenger rdf:type owl:Class ;
+           rdfs:comment "A person traveling on an aircraft during a flight" ;
+           rdfs:label "Passenger" ;
+           rdfs:sameAs "https://dbpedia.org/page/Passenger" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Premium_Economy
+:Premium_Economy rdf:type owl:Class ;
+                 rdfs:subClassOf :Seat_Type ;
+                 rdfs:comment "A class intermediate between Economy Class and Business Class, offering an enhanced flight experience compared to standard economy class, but at a lower price than business class." ;
+                 rdfs:label "PremiumEconomy" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Rating_Services
+:Rating_Services rdf:type owl:Class ;
+                 rdfs:comment "Entity that represents different services offered during a flight that can be evaluated and rated by passengers." ;
+                 rdfs:label "RatingServices" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review
+:Review rdf:type owl:Class ;
+        rdfs:comment "An evaluation or critique made by a passenger about their flight experience, which may include comments and ratings on different aspects of the flight." ;
+        rdfs:label "Review" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Comfort
+:Seat_Comfort rdf:type owl:Class ;
+              rdfs:subClassOf :Rating_Services ;
+              rdfs:comment "The quality and comfort of the seats offered to passengers during the flight." ;
+              rdfs:label "SeatComfort" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Seat_Type
+:Seat_Type rdf:type owl:Class ;
+           rdfs:comment "represents the different types of seats that a passenger may have occupied on an aircraft during a flight." ;
+           rdfs:label "SeatType" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Solo_Leisure
+:Solo_Leisure rdf:type owl:Class ;
+              rdfs:subClassOf :Type_Of_Traveller ;
+              rdfs:comment "assenger traveling alone for pleasure" ;
+              rdfs:label "SoloLeisure" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Type_Of_Traveller
+:Type_Of_Traveller rdf:type owl:Class ;
+                   rdfs:comment "Abstraction that indicates the role that the passenger has, the purpose for which he/she makes the flight: leisure, business, with family, etc." ;
+                   rdfs:label "TypeOfTraveller" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Value_For_Money
+:Value_For_Money rdf:type owl:Class ;
+                 rdfs:subClassOf :Rating_Services ;
+                 rdfs:comment "Passengers' perception of the relationship between the price paid for the flight and the value received in exchange." ;
+                 rdfs:label "ValueForMoney" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#WifiAndConnectivity
+:WifiAndConnectivity rdf:type owl:Class ;
+                     rdfs:subClassOf :Rating_Services ;
+                     rdfs:comment "The availability and quality of Wi-Fi connectivity and other connectivity services offered to passengers during the flight" ;
+                     rdfs:label "WifiAndConnectivity" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#A320
+:A320 rdf:type owl:NamedIndividual ,
+               :Aircraft ;
+      :operated_by :Ryanair ;
+      rdfs:comment "Instance representing an aircraft model named A320." ;
+      rdfs:label "A320" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Barcelona
+:Barcelona rdf:type owl:NamedIndividual ;
+           rdfs:comment "Instance representing the city of Barcelona." ;
+           rdfs:label "Barcelona" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Boeing737
+:Boeing737 rdf:type owl:NamedIndividual ,
+                    :Aircraft ;
+           :operated_by :Qatar ;
+           :used_by :Flight2 ;
+           rdfs:comment "Instance representing an aircraft model named Boeing 737." ;
+           rdfs:label "Boeing737" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Carlos
+:Carlos rdf:type owl:NamedIndividual ,
+                 :Passenger ;
+        :has_taken :Flight2 ;
+        rdfs:comment "Instance representing the passenger named Carlos." ;
+        rdfs:label "Carlos" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight1
+:Flight1 rdf:type owl:NamedIndividual ,
+                  :Flight ;
+         :arrives_at :Barcelona ;
+         :departs_from :Madrid ;
+         :has_been_taken_by :Pedro ;
+         :uses :A320 ;
+         :Date_flown "2024-03-01"^^xsd:date ;
+         rdfs:comment "Instance representing a first flight." ;
+         rdfs:label "Flight1" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Flight2
+:Flight2 rdf:type owl:NamedIndividual ;
+         :Date_flown "2024-04-05"^^xsd:date ;
+         rdfs:comment "Instance representing a second flight." ;
+         rdfs:label "Flight2" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Madrid
+:Madrid rdf:type owl:NamedIndividual ;
+        rdfs:comment "Instance representing the city of Madrid." ;
+        rdfs:label "Madrid" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Pedro
+:Pedro rdf:type owl:NamedIndividual ;
+       :citizen_of :Portugal ;
+       :has_created_review :Review1 ;
+       rdfs:comment "Instance representing a pasenger named Pedro." ;
+       rdfs:label "Pedro" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Portugal
+:Portugal rdf:type owl:NamedIndividual ,
+                   :Country ;
+          rdfs:comment "Instance that represents the country named Portugal." ;
+          rdfs:label "Portugal" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Qatar
+:Qatar rdf:type owl:NamedIndividual ;
+       rdfs:comment "Instance representing Qatar Airline." ;
+       rdfs:label "Qatar" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review1
+:Review1 rdf:type owl:NamedIndividual ;
+         :has_evaluation_of :SeatComfort1 ;
+         :Body "The staff on the plane are so very pleasant and always come to see us just to check if we need anything." ;
+         :Date_published "2024-04-27"^^xsd:date ;
+         :Overall_rating 7 ;
+         :Recommended "true"^^xsd:boolean ;
+         :Title "A pleasant flight" ;
+         :Verified "true"^^xsd:boolean ;
+         rdfs:comment "Instance representing a first review." ;
+         rdfs:label "Review1" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Review2
+:Review2 rdf:type owl:NamedIndividual ;
+         :is_created_by :Carlos ;
+         :Overall_rating 3 ;
+         rdfs:comment "Instance representing a second review." ;
+         rdfs:label "Review2" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#Ryanair
+:Ryanair rdf:type owl:NamedIndividual ,
+                  :Airline ;
+         rdfs:comment "Instance representing Ryanair Airline." ;
+         rdfs:label "Ryanair" .
+
+
+###  http://www.semanticweb.org/osantana/ontologies/2024/3/OSSPC2#SeatComfort1
+:SeatComfort1 rdf:type owl:NamedIndividual ,
+                       :Seat_Comfort ;
+              :serviceScore "3.5"^^xsd:float ;
+              rdfs:comment "Instance representing an evaluation about seat comfort of a flight.." ;
+              rdfs:label "SeatComfort1" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Bad_Review
+                :ExcellentReview
+                :Good_Review
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Business
+                :Couple_Leisure
+                :Family_Leisure
+                :Solo_Leisure
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Business_Class
+                :Economy_Class
+                :First_Class
+                :Premium_Economy
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#P> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#R> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#v> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdfs:comment "Rule which infers that the type of Review made by a Passenger is Positive if its overall mark is >=5 and <9." ;
+   rdfs:label "PositiveReview" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Passenger ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#P>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Review ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#R>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :has_created_review ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#P> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#R>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :Overall_rating ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#R> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#v>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first <urn:swrl:var#v> ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first 5 ;
+                                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                                  rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                                                              <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first <urn:swrl:var#v> ;
+                                                                                                                                                           rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                      rdf:first 9 ;
+                                                                                                                                                                      rdf:rest rdf:nil
+                                                                                                                                                                    ]
+                                                                                                                                                         ]
+                                                                                                            ] ;
+                                                                                                  rdf:rest rdf:nil
+                                                                                                ]
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Good_Review ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#R>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdfs:comment "Rule which infers that the type of Review made by a Passenger is Negative if its overall mark is < 5." ;
+   rdfs:label "NegativeReview" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Passenger ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#P>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Review ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#R>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :has_created_review ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#P> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#R>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :Overall_rating ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#R> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#v>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first <urn:swrl:var#v> ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first 5 ;
+                                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Bad_Review ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#R>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdfs:comment "Rule which infers that the type of Review made by a Passenger is Excellent if its overall mark is >9." ;
+   rdfs:label "ExcellentReview" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Passenger ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#P>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Review ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#R>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :has_created_review ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#P> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#R>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :Overall_rating ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#R> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#v>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThanOrEqual> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first <urn:swrl:var#v> ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first 9 ;
+                                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ExcellentReview ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#R>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

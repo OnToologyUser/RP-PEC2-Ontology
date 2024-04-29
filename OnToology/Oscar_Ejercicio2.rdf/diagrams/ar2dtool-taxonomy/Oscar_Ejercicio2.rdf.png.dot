@@ -1,0 +1,26 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "OSSPC2:Value_For_Money" "OSSPC2:Business" "OSSPC2:Geografic_Region" "OSSPC2:Bad_Review" "OSSPC2:Type_Of_Traveller" "OSSPC2:Good_Review" "OSSPC2:Country" "OSSPC2:Seat_Type" "OSSPC2:ExcellentReview" "OSSPC2:First_Class" "OSSPC2:Rating_Services" "OSSPC2:Review" "OSSPC2:FoodAndBeverages" "OSSPC2:Business_Class" "OSSPC2:Inflight_Entertainment" "OSSPC2:WifiAndConnectivity" "OSSPC2:Economy_Class" "OSSPC2:City" "OSSPC2:Ground_Service" "OSSPC2:Solo_Leisure" "OSSPC2:Couple_Leisure" "OSSPC2:Premium_Economy" "OSSPC2:Seat_Comfort" "OSSPC2:Family_Leisure" "OSSPC2:Cabin_Staff_Service" ; /*classes style*/
+	"OSSPC2:City" -> "OSSPC2:Geografic_Region" [ label = "rdfs:subClassOf" ];
+	"OSSPC2:Good_Review" -> "OSSPC2:Review" [ label = "rdfs:subClassOf" ];
+	"OSSPC2:FoodAndBeverages" -> "OSSPC2:Rating_Services" [ label = "rdfs:subClassOf" ];
+	"OSSPC2:Economy_Class" -> "OSSPC2:Seat_Type" [ label = "rdfs:subClassOf" ];
+	"OSSPC2:Family_Leisure" -> "OSSPC2:Type_Of_Traveller" [ label = "rdfs:subClassOf" ];
+	"OSSPC2:ExcellentReview" -> "OSSPC2:Review" [ label = "rdfs:subClassOf" ];
+	"OSSPC2:Cabin_Staff_Service" -> "OSSPC2:Rating_Services" [ label = "rdfs:subClassOf" ];
+	"OSSPC2:Business_Class" -> "OSSPC2:Seat_Type" [ label = "rdfs:subClassOf" ];
+	"OSSPC2:WifiAndConnectivity" -> "OSSPC2:Rating_Services" [ label = "rdfs:subClassOf" ];
+	"OSSPC2:Couple_Leisure" -> "OSSPC2:Type_Of_Traveller" [ label = "rdfs:subClassOf" ];
+	"OSSPC2:Inflight_Entertainment" -> "OSSPC2:Rating_Services" [ label = "rdfs:subClassOf" ];
+	"OSSPC2:Value_For_Money" -> "OSSPC2:Rating_Services" [ label = "rdfs:subClassOf" ];
+	"OSSPC2:First_Class" -> "OSSPC2:Seat_Type" [ label = "rdfs:subClassOf" ];
+	"OSSPC2:Solo_Leisure" -> "OSSPC2:Type_Of_Traveller" [ label = "rdfs:subClassOf" ];
+	"OSSPC2:Ground_Service" -> "OSSPC2:Rating_Services" [ label = "rdfs:subClassOf" ];
+	"OSSPC2:Bad_Review" -> "OSSPC2:Review" [ label = "rdfs:subClassOf" ];
+	"OSSPC2:Seat_Comfort" -> "OSSPC2:Rating_Services" [ label = "rdfs:subClassOf" ];
+	"OSSPC2:Country" -> "OSSPC2:Geografic_Region" [ label = "rdfs:subClassOf" ];
+	"OSSPC2:Premium_Economy" -> "OSSPC2:Seat_Type" [ label = "rdfs:subClassOf" ];
+	"OSSPC2:Business" -> "OSSPC2:Type_Of_Traveller" [ label = "rdfs:subClassOf" ];
+
+}
